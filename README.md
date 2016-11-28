@@ -35,7 +35,7 @@ For the lowlevel terminal spawner, see
 ## Install
 
 ``` bash
-$ npm install tty.js
+$ npm install tty2
 ```
 
 ## Usage
@@ -43,9 +43,10 @@ $ npm install tty.js
 tty.js is an app, but it's also possible to hook into it programatically.
 
 ``` js
-var tty = require('tty.js');
+var tty = require('tty2');
 
 var app = tty.createServer({
+  static: __dirname + "/static",
   shell: 'bash',
   users: {
     foo: 'bar'
